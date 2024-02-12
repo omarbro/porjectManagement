@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>User Api Info</title>
+</head>
+<body>
+<h1>User Info</h1>
+<p>ID: <span th:text="${userData.id}"></span></p>
+<p>Email: <span th:text="${userData.email}"></span></p>
+<p>First Name: <span th:text="${userData.first_name}"></span></p>
+<p>Last Name: <span th:text="${userData.last_name}"></span></p>
+<img th:src="${userData.avatar}" />
+</body>
+</html>

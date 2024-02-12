@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login</title>
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <h1 class="text-center">Login</h1>
+            <form action="#" th:action="@{/login}" th:object="${user}" method="post">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" th:field="*{email}" class="form-control" />
+                    <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="text-danger">Email Error</p>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" th:field="*{password}" class="form-control" />
+                    <p th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="text-danger">Password Error</p>
+                </div>
+                <div class="form-group">
+                    <p th:if="${error}" th:text="${error}" class="text-danger"></p>
+                </div>
+                <div class="form-group ">
+                    <button type="submit" class="btn btn-primary"> Login </button>
+                </div>
+            </form>
+            <a href="/register" class="btn btn-primary">Register</a>
+
+        </div>
+    </div>
+</div>
+
+<!-- Add jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Add Bootstrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
