@@ -1,0 +1,1 @@
+This a Project Management Software. Developed using Java Springboot framework, thymeleaf, Rest API and MySQL. This software helps to manage projects, assign employees to the project with Authentication and Authorization. 
